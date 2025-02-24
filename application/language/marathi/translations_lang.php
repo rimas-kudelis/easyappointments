@@ -484,4 +484,6 @@ $lang['invalid_credentials_provided'] = 'अवैध प्रमाणपत�
 $lang['calendar_url'] = 'कॅलेंडर URL';
 $lang['please_select'] = 'कृपया निवडा';
 $lang['secret_header'] = 'Secret Header';
+$lang['appointment_pending'] = 'Reminder about an upcoming appointment';
+$lang['you_have_a_pending_appointment'] = 'This is a reminder about your pending appointment with us. Below you can see the appointment details. Make changes by clicking the appointment link.';
 // End

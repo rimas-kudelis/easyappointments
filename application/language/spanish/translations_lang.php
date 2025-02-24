@@ -484,4 +484,6 @@ $lang['invalid_credentials_provided'] = 'Credenciales inválidas proporcionadas,
 $lang['calendar_url'] = 'URL del Calendario';
 $lang['please_select'] = 'Por Favor Seleccione';
 $lang['secret_header'] = 'Secret Header';
+$lang['appointment_pending'] = 'Reminder about an upcoming appointment';
+$lang['you_have_a_pending_appointment'] = 'This is a reminder about your pending appointment with us. Below you can see the appointment details. Make changes by clicking the appointment link.';
 // End

@@ -66,6 +66,7 @@
  * @property Ldap_client $ldap_client
  * @property Notifications $notifications
  * @property Permissions $permissions
+ * @property Reminder $reminder
  * @property Synchronization $synchronization
  * @property Timezones $timezones
  * @property Webhooks_client $webhooks_client

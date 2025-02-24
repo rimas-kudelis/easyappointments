@@ -451,4 +451,6 @@ $lang['webhook_deleted'] = 'WebHook נמחק בהצלחה.';
 $lang['delete_webhook'] = 'מחק WebHook';
 $lang['contact_info'] = 'מידע ליצירת קשר';
 $lang['secret_header'] = 'Secret Header';
+$lang['appointment_pending'] = 'Reminder about an upcoming appointment';
+$lang['you_have_a_pending_appointment'] = 'This is a reminder about your pending appointment with us. Below you can see the appointment details. Make changes by clicking the appointment link.';
 // End

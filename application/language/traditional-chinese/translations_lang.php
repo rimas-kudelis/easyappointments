@@ -484,4 +484,6 @@ $lang['invalid_credentials_provided'] = '提供的憑證無效，請重試。';
 $lang['calendar_url'] = '日曆網址';
 $lang['please_select'] = '請選擇';
 $lang['secret_header'] = 'Secret Header';
+$lang['appointment_pending'] = 'Reminder about an upcoming appointment';
+$lang['you_have_a_pending_appointment'] = 'This is a reminder about your pending appointment with us. Below you can see the appointment details. Make changes by clicking the appointment link.';
 // End

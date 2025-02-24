@@ -484,4 +484,6 @@ $lang['invalid_credentials_provided'] = 'Kredencialet e dhëna janë të pavlefs
 $lang['calendar_url'] = 'URL-ja e Kalendarit';
 $lang['please_select'] = 'Zgjidhni';
 $lang['secret_header'] = 'Header-i Sekret';
+$lang['appointment_pending'] = 'Reminder about an upcoming appointment';
+$lang['you_have_a_pending_appointment'] = 'This is a reminder about your pending appointment with us. Below you can see the appointment details. Make changes by clicking the appointment link.';
 // End

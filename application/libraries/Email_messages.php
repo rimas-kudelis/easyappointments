@@ -183,6 +183,53 @@ class Email_messages
     }
 
     /**
+     * Send an email with the appointment details.
+     *
+     * @param array $appointment Appointment data.
+     * @param array $provider Provider data.
+     * @param array $service Service data.
+     * @param array $customer Customer data.
+     * @param array $settings App settings.
+     * @param string $subject Email subject.
+     * @param string $message Email message.
+     * @param string $appointment_link Appointment unique URL.
+     * @param string $recipient_email Recipient email address.
+     * @param string $ics_stream ICS file contents.
+     * @param string|null $timezone Custom timezone.
+     *
+     * @throws DateInvalidTimeZoneException
+     * @throws DateMalformedStringException
+     * @throws Exception
+     */
+    public function send_appointment_reminder(
+        array $appointment,
+        array $provider,
+        array $service,
+        array $customer,
+        array $settings,
+        string $subject,
+        string $message,
+        string $appointment_link,
+        string $recipient_email,
+        string $ics_stream,
+        ?string $timezone = null,
+    ): void {
+        $this->send_appointment_saved(
+            $appointment,
+            $provider,
+            $service,
+            $customer,
+            $settings,
+            $subject,
+            $message,
+            $appointment_link,
+            $recipient_email,
+            $ics_stream,
+            $timezone,
+        );
+    }
+
+    /**
      * Send the account recovery details.
      *
      * @param string $password New password.

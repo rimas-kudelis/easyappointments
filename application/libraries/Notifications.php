@@ -197,6 +197,68 @@ class Notifications
     }
 
     /**
+     * Send a notifications about a pending appointment.
+     *
+     * @param array $appointment Appointment data.
+     * @param array $service Service data.
+     * @param array $provider Provider data.
+     * @param array $customer Customer data.
+     * @param array $settings Required settings.
+     */
+    public function remind_pending_appointment(
+        array $appointment,
+        array $service,
+        array $provider,
+        array $customer,
+        array $settings,
+    ): void {
+        try {
+            $current_language = config('language');
+
+            $customer_link = site_url('booking/reschedule/' . $appointment['hash']);
+
+            $ics_stream = $this->CI->ics_file->get_stream($appointment, $service, $provider, $customer);
+
+            // Notify customer.
+            $send_customer =
+                !empty($customer['email']) && filter_var(setting('customer_notifications'), FILTER_VALIDATE_BOOLEAN);
+
+            if ($send_customer === true) {
+                config(['language' => $customer['language']]);
+                $this->CI->lang->load('translations');
+                $subject = lang('appointment_pending');
+                $message = lang('you_have_a_pending_appointment');
+
+                $this->CI->email_messages->send_appointment_saved(
+                    $appointment,
+                    $provider,
+                    $service,
+                    $customer,
+                    $settings,
+                    $subject,
+                    $message,
+                    $customer_link,
+                    $customer['email'],
+                    $ics_stream,
+                    $customer['timezone'],
+                );
+            }
+        } catch (Throwable $e) {
+            log_message(
+                'error',
+                'Notifications - Could not email reminder about appointment (' .
+                    ($appointment['id'] ?? '-') .
+                    ') : ' .
+                    $e->getMessage(),
+            );
+            log_message('error', $e->getTraceAsString());
+        } finally {
+            config(['language' => $current_language ?? 'english']);
+            $this->CI->lang->load('translations');
+        }
+    }
+
+    /**
      * Send the required notifications, related to an appointment removal.
      *
      * @param array $appointment Appointment data.

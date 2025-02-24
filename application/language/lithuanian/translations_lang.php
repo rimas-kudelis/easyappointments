@@ -484,4 +484,6 @@ $lang['invalid_credentials_provided'] = 'Pateikti negaliojantys duomenys, bandyk
 $lang['calendar_url'] = 'Kalendoriaus URL';
 $lang['please_select'] = 'Prašome pasirinkti';
 $lang['secret_header'] = 'Secret Header';
+$lang['appointment_pending'] = 'Priminimas apie suplanuotą vizitą';
+$lang['you_have_a_pending_appointment'] = 'Primename, jog esate užsiregistravę vizitui pas mus. Žemiau galite pamatyti informaciją apie vizitą. Pakeitimus galite atlikti, spustelėję vizito nuorodą.';
 // End

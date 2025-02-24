@@ -459,4 +459,6 @@ $lang['default_language'] = 'Standardspråk';
 $lang['default_language_hint'] = 'Angi standard språkverdi som skal brukes for nye poster.';
 $lang['sync_method_prompt'] = 'Hvilken synkroniseringsmetode ønsker du å bruke?';
 $lang['secret_header'] = 'Secret Header';
+$lang['appointment_pending'] = 'Reminder about an upcoming appointment';
+$lang['you_have_a_pending_appointment'] = 'This is a reminder about your pending appointment with us. Below you can see the appointment details. Make changes by clicking the appointment link.';
 // End

@@ -37,6 +37,7 @@ class Console extends EA_Controller
         $this->load->dbutil();
 
         $this->load->library('instance');
+        $this->load->library('reminder');
 
         $this->load->model('admins_model');
         $this->load->model('customers_model');
@@ -153,6 +154,18 @@ class Console extends EA_Controller
                 Caldav::sync((string) $provider['id']);
             }
         }
+    }
+
+    /**
+     * Remind customers about appointments upcoming tomorrow.
+     *
+     * Usage:
+     *
+     * php index.php console remind
+     */
+    public function remind(): void
+    {
+        $this->reminder->remind();
     }
 
     /**
